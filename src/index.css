@@ -1,0 +1,7 @@
+@import "./assets/pe-icon-set-weather/css/pe-icon-set-weather.css";
+@import "./assets/pe-icon-set-weather/css/helper.css";
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
