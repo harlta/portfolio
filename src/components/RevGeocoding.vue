@@ -50,7 +50,7 @@ function setLocationValue(code) {
 </script>
 
 <template>
-    <div class="bg-gray-400 m-4 p-4 rounded-lg transition hover:bg-gray-300 group relative truncate">
+    <div class="bg-gray-400 m-4 p-4 rounded-lg transition hover:bg-gray-300 group relative text-clip">
         <div class="inline-grid grid-cols-2 gap-2 items-center justify-center">
             <div class="flex flex-col w-3/4  text-center">
                 <span class="pe-is-w-compass-s text-3xl"></span>
@@ -64,7 +64,7 @@ function setLocationValue(code) {
             <span v-else>location : loading...</span>
 
             <div
-                class="absolute bg-black text-gray-400 top-full my-2 p-2 opacity-0 transition group-hover:opacity-100 pointer-events-none text-left">
+                class="absolute bg-black text-gray-200 top-20 my-2 p-2 opacity-0 transition group-hover:opacity-100 text-left pointer-events-none ">
                 <p>plus_code : {{ location.plusCode }}<br>lat : {{ props.coords.lat }}<br> lng : {{ props.coords.lng }}
                 </p>
             </div>

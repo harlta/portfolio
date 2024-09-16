@@ -27,9 +27,9 @@ function getLatLng(lat, lng) {
 
     <TheHeader class="z-10 sticky top-0"></TheHeader>
 
-    <div class="m-4 py-4 px-8 bg-gray-900 grid grid-cols-2 gap-4 font-barlow items-center">
+    <div class="m-4 py-4 px-8 bg-gray-900 flex flex-col md:flex-row justify-center md:px-4">
 
-        <div>
+        <div class="basis-1/2 md:basis-full md:w-full">
 
             <div class="bg-gray-900">
                 <GoogleMapAPI @getLatLng="getLatLng"></GoogleMapAPI>
@@ -37,7 +37,7 @@ function getLatLng(lat, lng) {
 
         </div>
 
-        <div class="inline-grid grid-cols-1 grid-rows-2">
+        <div class="inline-flex flex-col basis-1/2 md:basis-full md:w-full place-content-center ">
             <p v-if="isResponded">
                 <RevGeocoding v-bind:coords="coords" />
             </p>
