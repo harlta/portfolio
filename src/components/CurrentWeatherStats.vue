@@ -107,22 +107,24 @@ const initWeatherIcon = computed(() => {
 
     <section class="p-4 bg-gray-900">
 
-        <div class="grid grid-cols-2 grid-rows-2 gap-2">
+        <div class="grid grid-rows-2 gap-2 md:grid-flow-col object-center">
 
-            <div class="transition bg-gray-400 h-16 rounded-lg content-center text-center hover:bg-gray-300"
+            <div class="transition truncate bg-gray-400 h-16 rounded-lg content-center hover:bg-gray-300"
                 v-on:mouseover="iconClass.weather.change(true, isDay, weatherCode)"
                 v-on:mouseleave="iconClass.weather.change(false, isDay, weatherCode)">
-                <div class="grid grid-cols-4 grid-rows-1 gap-2 justify-center items-center text-center">
-                    <i v-bind:class="`${iconClass.weather.str} text-4xl`" v-bind:key="initWeatherIcon" />
-                    <div class="grid-rows-2 col-span-2">
+                <div class="grid grid-cols-4 gap-2 justify-center text-center items-center">
+                    <i v-bind:class="`${iconClass.weather.str} min-w-9 text-4xl text-center`"
+                        v-bind:key="initWeatherIcon" />
+                    <div class="col-span-2 text-center">
                         <p>{{ iconClass.weather.dayStr }}</p>
                         <p>{{ iconClass.weather.codeStr }}</p>
                     </div>
+                    <div class="grid-cols-subgrid"></div>
                 </div>
 
             </div>
 
-            <div class="bg-gray-400 h-16 rounded-lg content-center hover:bg-gray-300"
+            <div class="transition truncate bg-gray-400 h-16 rounded-lg content-center hover:bg-gray-300"
                 v-on:mouseover="iconClass.humidity.change(true)" v-on:mouseleave="iconClass.humidity.change(false)">
                 <div class="grid grid-cols-4 grid-rows-1 gap-2 justify-center items-center text-center">
                     <i v-bind:class="`${iconClass.humidity.str} text-4xl`" />
@@ -131,7 +133,7 @@ const initWeatherIcon = computed(() => {
                 </div>
             </div>
 
-            <div class="bg-gray-400 h-16 rounded-lg content-center hover:bg-gray-300"
+            <div class="transition truncate bg-gray-400 h-16 rounded-lg content-center hover:bg-gray-300"
                 v-on:mouseover="iconClass.thermometer.change(true)"
                 v-on:mouseleave="iconClass.thermometer.change(false)">
                 <div class="grid grid-cols-4 grid-rows-1 gap-2 justify-center items-center text-center">
@@ -141,7 +143,7 @@ const initWeatherIcon = computed(() => {
                 </div>
             </div>
 
-            <div class="bg-gray-400 h-16 p-2  rounded-lg text-center">
+            <div class="transition truncate bg-gray-400 h-16 p-2  rounded-lg text-center hover:bg-gray-300">
                 <p>データ取得時刻</p>
                 <div class="grid grid-cols-3 gap-2">
                     <p class="col-span-2">{{ date[0] }} / {{ date[1] }} / {{ date[2] }}</p>

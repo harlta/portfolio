@@ -1,4 +1,5 @@
 <script setup>
+import TheHeader from './components/TheHeader.vue';
 import CurrentWeatherStats from './components/CurrentWeatherStats.vue';
 import weeklyTemperatureLineChart from './components/weeklyTemperatureLineChart.vue';
 import GoogleMapAPI from './components/GoogleMapAPI.vue';
@@ -23,6 +24,9 @@ function getLatLng(lat, lng) {
 </script>
 
 <template>
+
+    <TheHeader class="z-10 sticky top-0"></TheHeader>
+
     <div class="m-4 py-4 px-8 bg-gray-900 grid grid-cols-2 gap-4 font-barlow items-center">
 
         <div>
@@ -45,15 +49,10 @@ function getLatLng(lat, lng) {
 
     </div>
 
-
-
     <div v-if="isResponded" class="m-4 bg-gray-900">
         <p>
             <weeklyTemperatureLineChart />
         </p>
     </div>
 
-    <div class="text-center text-2xl text-white">
-        <a href="https://github.com/harlta/portfolio">READ ME (This is Portfolio)</a>
-    </div>
 </template>

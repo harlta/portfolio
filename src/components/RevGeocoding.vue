@@ -50,7 +50,7 @@ function setLocationValue(code) {
 </script>
 
 <template>
-    <div class="bg-gray-400 m-4 p-4 rounded-lg transition hover:bg-gray-300 group relative">
+    <div class="bg-gray-400 m-4 p-4 rounded-lg transition hover:bg-gray-300 group relative truncate">
         <div class="inline-grid grid-cols-2 gap-2 items-center justify-center">
             <div class="flex flex-col w-3/4  text-center">
                 <span class="pe-is-w-compass-s text-3xl"></span>
